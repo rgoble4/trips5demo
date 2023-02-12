@@ -10,6 +10,7 @@ import SwiftUI
 struct NoDataView: View {
     var body: some View {
         Text("No Available Vehicle. Please make sure you have at least one vehicle defined in Settings.")
+            .padding()
             .accessibilityIdentifier("noDataText")
     }
 }
