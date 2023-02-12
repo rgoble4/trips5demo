@@ -1,0 +1,1114 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4019CD228A60767001A1A37 /* Trips5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CD128A60767001A1A37 /* Trips5App.swift */; };
+		D4019CD428A60767001A1A37 /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CD328A60767001A1A37 /* TripsView.swift */; };
+		D4019CD628A60768001A1A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4019CD528A60768001A1A37 /* Assets.xcassets */; };
+		D4019CDA28A60768001A1A37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4019CD928A60768001A1A37 /* Preview Assets.xcassets */; };
+		D4019CE428A8A962001A1A37 /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE328A8A962001A1A37 /* NavView.swift */; };
+		D4019CE628A8AA2B001A1A37 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE528A8AA2B001A1A37 /* SettingsView.swift */; };
+		D4019CE828A8AB01001A1A37 /* FuelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE728A8AB01001A1A37 /* FuelsView.swift */; };
+		D4019CEA28A8BEFF001A1A37 /* VehicleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE928A8BEFF001A1A37 /* VehicleStore.swift */; };
+		D4019CEC28A8BF61001A1A37 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CEB28A8BF61001A1A37 /* Vehicle.swift */; };
+		D4019CEE28A8C22D001A1A37 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CED28A8C22D001A1A37 /* Database.swift */; };
+		D4019CF228A95F58001A1A37 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CF128A95F58001A1A37 /* Environment.swift */; };
+		D4019CF528A96BBF001A1A37 /* VehicleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CF428A96BBF001A1A37 /* VehicleListView.swift */; };
+		D4019CF728A9DC44001A1A37 /* VehicleFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CF628A9DC44001A1A37 /* VehicleFormView.swift */; };
+		D411051428D5A2D8005C702B /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051328D5A2D8005C702B /* Trip.swift */; };
+		D411051628D5A2E1005C702B /* VehicleTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051528D5A2E1005C702B /* VehicleTrip.swift */; };
+		D411051A28D5A3E0005C702B /* Trips5Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051928D5A3E0005C702B /* Trips5Trip.swift */; };
+		D411051D28D5A477005C702B /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051C28D5A477005C702B /* TripStore.swift */; };
+		D411051F28D5A812005C702B /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051E28D5A812005C702B /* TripsViewModel.swift */; };
+		D411052128D5A9B6005C702B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411052028D5A9B6005C702B /* Constants.swift */; };
+		D411052328D5ABBF005C702B /* TripFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411052228D5ABBF005C702B /* TripFormViewModel.swift */; };
+		D411052528D5AC38005C702B /* TripFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411052428D5AC38005C702B /* TripFormView.swift */; };
+		D415401E2990B08D00B81E18 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415401D2990B08D00B81E18 /* GaugeView.swift */; };
+		D41540202990B34700B81E18 /* AggregateSqlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415401F2990B34700B81E18 /* AggregateSqlHelper.swift */; };
+		D41540222991E5E400B81E18 /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41540212991E5E400B81E18 /* LineGraphView.swift */; };
+		D4283F3828D3FC73003EA864 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D4283F3728D3FC73003EA864 /* GRDB */; };
+		D4283F3A28D3FFE7003EA864 /* FuelFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4283F3928D3FFE7003EA864 /* FuelFormView.swift */; };
+		D4283F3C28D4008A003EA864 /* Trips5Fuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4283F3B28D4008A003EA864 /* Trips5Fuel.swift */; };
+		D4283F3E28D40A7E003EA864 /* FuelFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4283F3D28D40A7E003EA864 /* FuelFormViewModel.swift */; };
+		D457A24828BC356100F8C40A /* RemoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457A24728BC356100F8C40A /* RemoteStore.swift */; };
+		D466C7BF29985E6000D7448E /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D466C7BE29985E6000D7448E /* GRDB */; };
+		D466C7C129985E6600D7448E /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D466C7C029985E6600D7448E /* GRDB */; };
+		D466C7C32998A76400D7448E /* FormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466C7C22998A76400D7448E /* FormattersTests.swift */; };
+		D466C7C52998A98800D7448E /* EnvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466C7C42998A98800D7448E /* EnvTests.swift */; };
+		D466C7C72998AAC500D7448E /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466C7C62998AAC500D7448E /* ExtensionsTests.swift */; };
+		D466C7C92998B41B00D7448E /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466C7C82998B41B00D7448E /* ModelTests.swift */; };
+		D489BEB5298EE14600783DD8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEB4298EE14600783DD8 /* DashboardView.swift */; };
+		D489BEB7298EE5FD00783DD8 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEB6298EE5FD00783DD8 /* DashboardViewModel.swift */; };
+		D489BEBB298F1B4900783DD8 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBA298F1B4900783DD8 /* Dependencies.swift */; };
+		D489BEBD298F684C00783DD8 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBC298F684C00783DD8 /* ButtonBarView.swift */; };
+		D489BEBF298F802500783DD8 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBE298F802500783DD8 /* LineChart.swift */; };
+		D489BEC1298F861200783DD8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEC0298F861200783DD8 /* CardView.swift */; };
+		D4A1D90328D96B1A0072F397 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A1D90228D96B1A0072F397 /* ViewUtils.swift */; };
+		D4CF8C3828BFE143006AFC56 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3728BFE143006AFC56 /* Theme.swift */; };
+		D4CF8C3A28C060D2006AFC56 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3928C060D2006AFC56 /* SyncManager.swift */; };
+		D4CF8C4028C063EC006AFC56 /* Trips5Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3F28C063EC006AFC56 /* Trips5Vehicle.swift */; };
+		D4CF8C4528C2F627006AFC56 /* SyncRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4428C2F627006AFC56 /* SyncRequest.swift */; };
+		D4CF8C4728C47A2B006AFC56 /* Deleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4628C47A2B006AFC56 /* Deleted.swift */; };
+		D4CF8C4928C47AA5006AFC56 /* Trips5Deleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4828C47AA5006AFC56 /* Trips5Deleted.swift */; };
+		D4CF8C4B28C6EC06006AFC56 /* Fuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4A28C6EC06006AFC56 /* Fuel.swift */; };
+		D4CF8C4D28C6EF53006AFC56 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4C28C6EF53006AFC56 /* Extensions.swift */; };
+		D4CF8C5528C706E1006AFC56 /* FuelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5428C706E1006AFC56 /* FuelsViewModel.swift */; };
+		D4CF8C5828C864AB006AFC56 /* FuelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5728C864AB006AFC56 /* FuelStore.swift */; };
+		D4CF8C5A28C86555006AFC56 /* VehicleFuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5928C86555006AFC56 /* VehicleFuel.swift */; };
+		D4CF8C5C28C870D1006AFC56 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5B28C870D1006AFC56 /* Formatters.swift */; };
+		D4F6F4A7299756C20000F33C /* GaugeGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4A6299756C20000F33C /* GaugeGroupView.swift */; };
+		D4F6F4AB29982B640000F33C /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4AA29982B640000F33C /* NoDataView.swift */; };
+		D4F6F4C02998584B0000F33C /* Trips5UIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4BF2998584B0000F33C /* Trips5UIUITests.swift */; };
+		D4F6F4C829985AA00000F33C /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051328D5A2D8005C702B /* Trip.swift */; };
+		D4F6F4C929985AA00000F33C /* Deleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4628C47A2B006AFC56 /* Deleted.swift */; };
+		D4F6F4CA29985AA00000F33C /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CEB28A8BF61001A1A37 /* Vehicle.swift */; };
+		D4F6F4CB29985AA00000F33C /* VehicleFuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5928C86555006AFC56 /* VehicleFuel.swift */; };
+		D4F6F4CC29985AA00000F33C /* Fuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4A28C6EC06006AFC56 /* Fuel.swift */; };
+		D4F6F4CD29985AA00000F33C /* VehicleTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051528D5A2E1005C702B /* VehicleTrip.swift */; };
+		D4F6F4CE29985AA10000F33C /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051328D5A2D8005C702B /* Trip.swift */; };
+		D4F6F4CF29985AA10000F33C /* Deleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4628C47A2B006AFC56 /* Deleted.swift */; };
+		D4F6F4D029985AA10000F33C /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CEB28A8BF61001A1A37 /* Vehicle.swift */; };
+		D4F6F4D129985AA10000F33C /* VehicleFuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5928C86555006AFC56 /* VehicleFuel.swift */; };
+		D4F6F4D229985AA10000F33C /* Fuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4A28C6EC06006AFC56 /* Fuel.swift */; };
+		D4F6F4D329985AA10000F33C /* VehicleTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051528D5A2E1005C702B /* VehicleTrip.swift */; };
+		D4F6F4D429985AA70000F33C /* Trips5Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051928D5A3E0005C702B /* Trips5Trip.swift */; };
+		D4F6F4D529985AA70000F33C /* Trips5Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3F28C063EC006AFC56 /* Trips5Vehicle.swift */; };
+		D4F6F4D629985AA70000F33C /* SyncRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4428C2F627006AFC56 /* SyncRequest.swift */; };
+		D4F6F4D729985AA70000F33C /* Trips5Fuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4283F3B28D4008A003EA864 /* Trips5Fuel.swift */; };
+		D4F6F4D829985AA70000F33C /* Trips5Deleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4828C47AA5006AFC56 /* Trips5Deleted.swift */; };
+		D4F6F4D929985AA80000F33C /* Trips5Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051928D5A3E0005C702B /* Trips5Trip.swift */; };
+		D4F6F4DA29985AA80000F33C /* Trips5Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3F28C063EC006AFC56 /* Trips5Vehicle.swift */; };
+		D4F6F4DB29985AA80000F33C /* SyncRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4428C2F627006AFC56 /* SyncRequest.swift */; };
+		D4F6F4DC29985AA80000F33C /* Trips5Fuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4283F3B28D4008A003EA864 /* Trips5Fuel.swift */; };
+		D4F6F4DD29985AA80000F33C /* Trips5Deleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4828C47AA5006AFC56 /* Trips5Deleted.swift */; };
+		D4F6F4DE29985AAD0000F33C /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415401D2990B08D00B81E18 /* GaugeView.swift */; };
+		D4F6F4DF29985AAD0000F33C /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEB6298EE5FD00783DD8 /* DashboardViewModel.swift */; };
+		D4F6F4E029985AAD0000F33C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEC0298F861200783DD8 /* CardView.swift */; };
+		D4F6F4E129985AAD0000F33C /* GaugeGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4A6299756C20000F33C /* GaugeGroupView.swift */; };
+		D4F6F4E229985AAD0000F33C /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEB4298EE14600783DD8 /* DashboardView.swift */; };
+		D4F6F4E329985AAD0000F33C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBE298F802500783DD8 /* LineChart.swift */; };
+		D4F6F4E429985AAD0000F33C /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41540212991E5E400B81E18 /* LineGraphView.swift */; };
+		D4F6F4E529985AAD0000F33C /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBC298F684C00783DD8 /* ButtonBarView.swift */; };
+		D4F6F4E629985AAD0000F33C /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415401D2990B08D00B81E18 /* GaugeView.swift */; };
+		D4F6F4E729985AAD0000F33C /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEB6298EE5FD00783DD8 /* DashboardViewModel.swift */; };
+		D4F6F4E829985AAD0000F33C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEC0298F861200783DD8 /* CardView.swift */; };
+		D4F6F4E929985AAD0000F33C /* GaugeGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4A6299756C20000F33C /* GaugeGroupView.swift */; };
+		D4F6F4EA29985AAD0000F33C /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEB4298EE14600783DD8 /* DashboardView.swift */; };
+		D4F6F4EB29985AAD0000F33C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBE298F802500783DD8 /* LineChart.swift */; };
+		D4F6F4EC29985AAD0000F33C /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41540212991E5E400B81E18 /* LineGraphView.swift */; };
+		D4F6F4ED29985AAD0000F33C /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBC298F684C00783DD8 /* ButtonBarView.swift */; };
+		D4F6F4EE29985AB30000F33C /* FuelFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4283F3D28D40A7E003EA864 /* FuelFormViewModel.swift */; };
+		D4F6F4EF29985AB30000F33C /* FuelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE728A8AB01001A1A37 /* FuelsView.swift */; };
+		D4F6F4F029985AB30000F33C /* FuelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5428C706E1006AFC56 /* FuelsViewModel.swift */; };
+		D4F6F4F129985AB30000F33C /* FuelFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4283F3928D3FFE7003EA864 /* FuelFormView.swift */; };
+		D4F6F4F229985AB30000F33C /* FuelFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4283F3D28D40A7E003EA864 /* FuelFormViewModel.swift */; };
+		D4F6F4F329985AB30000F33C /* FuelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE728A8AB01001A1A37 /* FuelsView.swift */; };
+		D4F6F4F429985AB30000F33C /* FuelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5428C706E1006AFC56 /* FuelsViewModel.swift */; };
+		D4F6F4F529985AB30000F33C /* FuelFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4283F3928D3FFE7003EA864 /* FuelFormView.swift */; };
+		D4F6F4F629985AB70000F33C /* VehicleFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CF628A9DC44001A1A37 /* VehicleFormView.swift */; };
+		D4F6F4F729985AB70000F33C /* VehicleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CF428A96BBF001A1A37 /* VehicleListView.swift */; };
+		D4F6F4F829985AB70000F33C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE528A8AA2B001A1A37 /* SettingsView.swift */; };
+		D4F6F4F929985AB70000F33C /* VehicleFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CF628A9DC44001A1A37 /* VehicleFormView.swift */; };
+		D4F6F4FA29985AB70000F33C /* VehicleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CF428A96BBF001A1A37 /* VehicleListView.swift */; };
+		D4F6F4FB29985AB70000F33C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE528A8AA2B001A1A37 /* SettingsView.swift */; };
+		D4F6F4FC29985ABB0000F33C /* TripFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411052228D5ABBF005C702B /* TripFormViewModel.swift */; };
+		D4F6F4FD29985ABB0000F33C /* TripFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411052428D5AC38005C702B /* TripFormView.swift */; };
+		D4F6F4FE29985ABB0000F33C /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CD328A60767001A1A37 /* TripsView.swift */; };
+		D4F6F4FF29985ABB0000F33C /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051E28D5A812005C702B /* TripsViewModel.swift */; };
+		D4F6F50029985ABC0000F33C /* TripFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411052228D5ABBF005C702B /* TripFormViewModel.swift */; };
+		D4F6F50129985ABC0000F33C /* TripFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411052428D5AC38005C702B /* TripFormView.swift */; };
+		D4F6F50229985ABC0000F33C /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CD328A60767001A1A37 /* TripsView.swift */; };
+		D4F6F50329985ABC0000F33C /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051E28D5A812005C702B /* TripsViewModel.swift */; };
+		D4F6F50429985AC10000F33C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CED28A8C22D001A1A37 /* Database.swift */; };
+		D4F6F50529985AC10000F33C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411052028D5A9B6005C702B /* Constants.swift */; };
+		D4F6F50629985AC10000F33C /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051C28D5A477005C702B /* TripStore.swift */; };
+		D4F6F50729985AC10000F33C /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3928C060D2006AFC56 /* SyncManager.swift */; };
+		D4F6F50829985AC10000F33C /* AggregateSqlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415401F2990B34700B81E18 /* AggregateSqlHelper.swift */; };
+		D4F6F50929985AC10000F33C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4C28C6EF53006AFC56 /* Extensions.swift */; };
+		D4F6F50A29985AC10000F33C /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBA298F1B4900783DD8 /* Dependencies.swift */; };
+		D4F6F50B29985AC10000F33C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CF128A95F58001A1A37 /* Environment.swift */; };
+		D4F6F50C29985AC10000F33C /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5B28C870D1006AFC56 /* Formatters.swift */; };
+		D4F6F50D29985AC10000F33C /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A1D90228D96B1A0072F397 /* ViewUtils.swift */; };
+		D4F6F50E29985AC10000F33C /* VehicleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE928A8BEFF001A1A37 /* VehicleStore.swift */; };
+		D4F6F50F29985AC10000F33C /* FuelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5728C864AB006AFC56 /* FuelStore.swift */; };
+		D4F6F51029985AC10000F33C /* RemoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457A24728BC356100F8C40A /* RemoteStore.swift */; };
+		D4F6F51129985AC10000F33C /* Trips5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CD128A60767001A1A37 /* Trips5App.swift */; };
+		D4F6F51229985AC10000F33C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3728BFE143006AFC56 /* Theme.swift */; };
+		D4F6F51329985AC10000F33C /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE328A8A962001A1A37 /* NavView.swift */; };
+		D4F6F51429985AC10000F33C /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4AA29982B640000F33C /* NoDataView.swift */; };
+		D4F6F51529985AC20000F33C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CED28A8C22D001A1A37 /* Database.swift */; };
+		D4F6F51629985AC20000F33C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411052028D5A9B6005C702B /* Constants.swift */; };
+		D4F6F51729985AC20000F33C /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411051C28D5A477005C702B /* TripStore.swift */; };
+		D4F6F51829985AC20000F33C /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3928C060D2006AFC56 /* SyncManager.swift */; };
+		D4F6F51929985AC20000F33C /* AggregateSqlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415401F2990B34700B81E18 /* AggregateSqlHelper.swift */; };
+		D4F6F51A29985AC20000F33C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C4C28C6EF53006AFC56 /* Extensions.swift */; };
+		D4F6F51B29985AC20000F33C /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBA298F1B4900783DD8 /* Dependencies.swift */; };
+		D4F6F51C29985AC20000F33C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CF128A95F58001A1A37 /* Environment.swift */; };
+		D4F6F51D29985AC20000F33C /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5B28C870D1006AFC56 /* Formatters.swift */; };
+		D4F6F51E29985AC20000F33C /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A1D90228D96B1A0072F397 /* ViewUtils.swift */; };
+		D4F6F51F29985AC20000F33C /* VehicleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE928A8BEFF001A1A37 /* VehicleStore.swift */; };
+		D4F6F52029985AC20000F33C /* FuelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5728C864AB006AFC56 /* FuelStore.swift */; };
+		D4F6F52129985AC20000F33C /* RemoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457A24728BC356100F8C40A /* RemoteStore.swift */; };
+		D4F6F52229985AC20000F33C /* Trips5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CD128A60767001A1A37 /* Trips5App.swift */; };
+		D4F6F52329985AC20000F33C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3728BFE143006AFC56 /* Theme.swift */; };
+		D4F6F52429985AC20000F33C /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE328A8A962001A1A37 /* NavView.swift */; };
+		D4F6F52529985AC20000F33C /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4AA29982B640000F33C /* NoDataView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4F6F4B42998583C0000F33C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4019CC628A60767001A1A37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4019CCD28A60767001A1A37;
+			remoteInfo = Trips5;
+		};
+		D4F6F4C32998584B0000F33C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4019CC628A60767001A1A37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4019CCD28A60767001A1A37;
+			remoteInfo = Trips5;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4019CCE28A60767001A1A37 /* Trips5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trips5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4019CD128A60767001A1A37 /* Trips5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips5App.swift; sourceTree = "<group>"; };
+		D4019CD328A60767001A1A37 /* TripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
+		D4019CD528A60768001A1A37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4019CD728A60768001A1A37 /* Trips5.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Trips5.entitlements; sourceTree = "<group>"; };
+		D4019CD928A60768001A1A37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D4019CE328A8A962001A1A37 /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
+		D4019CE528A8AA2B001A1A37 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D4019CE728A8AB01001A1A37 /* FuelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelsView.swift; sourceTree = "<group>"; };
+		D4019CE928A8BEFF001A1A37 /* VehicleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleStore.swift; sourceTree = "<group>"; };
+		D4019CEB28A8BF61001A1A37 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		D4019CED28A8C22D001A1A37 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		D4019CF128A95F58001A1A37 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		D4019CF428A96BBF001A1A37 /* VehicleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListView.swift; sourceTree = "<group>"; };
+		D4019CF628A9DC44001A1A37 /* VehicleFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFormView.swift; sourceTree = "<group>"; };
+		D411051328D5A2D8005C702B /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		D411051528D5A2E1005C702B /* VehicleTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTrip.swift; sourceTree = "<group>"; };
+		D411051928D5A3E0005C702B /* Trips5Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips5Trip.swift; sourceTree = "<group>"; };
+		D411051C28D5A477005C702B /* TripStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStore.swift; sourceTree = "<group>"; };
+		D411051E28D5A812005C702B /* TripsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewModel.swift; sourceTree = "<group>"; };
+		D411052028D5A9B6005C702B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D411052228D5ABBF005C702B /* TripFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFormViewModel.swift; sourceTree = "<group>"; };
+		D411052428D5AC38005C702B /* TripFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFormView.swift; sourceTree = "<group>"; };
+		D415401D2990B08D00B81E18 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
+		D415401F2990B34700B81E18 /* AggregateSqlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregateSqlHelper.swift; sourceTree = "<group>"; };
+		D41540212991E5E400B81E18 /* LineGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
+		D4283F3928D3FFE7003EA864 /* FuelFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelFormView.swift; sourceTree = "<group>"; };
+		D4283F3B28D4008A003EA864 /* Trips5Fuel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips5Fuel.swift; sourceTree = "<group>"; };
+		D4283F3D28D40A7E003EA864 /* FuelFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelFormViewModel.swift; sourceTree = "<group>"; };
+		D457A24728BC356100F8C40A /* RemoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteStore.swift; sourceTree = "<group>"; };
+		D466C7C22998A76400D7448E /* FormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattersTests.swift; sourceTree = "<group>"; };
+		D466C7C42998A98800D7448E /* EnvTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvTests.swift; sourceTree = "<group>"; };
+		D466C7C62998AAC500D7448E /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
+		D466C7C82998B41B00D7448E /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		D489BEB4298EE14600783DD8 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		D489BEB6298EE5FD00783DD8 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		D489BEBA298F1B4900783DD8 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		D489BEBC298F684C00783DD8 /* ButtonBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBarView.swift; sourceTree = "<group>"; };
+		D489BEBE298F802500783DD8 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		D489BEC0298F861200783DD8 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D4A1D90228D96B1A0072F397 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		D4CF8C3728BFE143006AFC56 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D4CF8C3928C060D2006AFC56 /* SyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
+		D4CF8C3F28C063EC006AFC56 /* Trips5Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips5Vehicle.swift; sourceTree = "<group>"; };
+		D4CF8C4428C2F627006AFC56 /* SyncRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncRequest.swift; sourceTree = "<group>"; };
+		D4CF8C4628C47A2B006AFC56 /* Deleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deleted.swift; sourceTree = "<group>"; };
+		D4CF8C4828C47AA5006AFC56 /* Trips5Deleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips5Deleted.swift; sourceTree = "<group>"; };
+		D4CF8C4A28C6EC06006AFC56 /* Fuel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuel.swift; sourceTree = "<group>"; };
+		D4CF8C4C28C6EF53006AFC56 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D4CF8C5428C706E1006AFC56 /* FuelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelsViewModel.swift; sourceTree = "<group>"; };
+		D4CF8C5728C864AB006AFC56 /* FuelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStore.swift; sourceTree = "<group>"; };
+		D4CF8C5928C86555006AFC56 /* VehicleFuel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFuel.swift; sourceTree = "<group>"; };
+		D4CF8C5B28C870D1006AFC56 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		D4F6F4A6299756C20000F33C /* GaugeGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeGroupView.swift; sourceTree = "<group>"; };
+		D4F6F4AA29982B640000F33C /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		D4F6F4B02998583C0000F33C /* Trips5UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Trips5UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4F6F4BD2998584B0000F33C /* Trips5UIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Trips5UIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4F6F4BF2998584B0000F33C /* Trips5UIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips5UIUITests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4019CCB28A60767001A1A37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4283F3828D3FC73003EA864 /* GRDB in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F6F4AD2998583C0000F33C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D466C7BF29985E6000D7448E /* GRDB in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F6F4BA2998584B0000F33C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D466C7C129985E6600D7448E /* GRDB in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4019CC528A60767001A1A37 = {
+			isa = PBXGroup;
+			children = (
+				D4019CD028A60767001A1A37 /* Trips5 */,
+				D4F6F4B12998583C0000F33C /* Trips5UnitTests */,
+				D4F6F4BE2998584B0000F33C /* Trips5UIUITests */,
+				D4019CCF28A60767001A1A37 /* Products */,
+				D466C7BD29985E6000D7448E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4019CCF28A60767001A1A37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4019CCE28A60767001A1A37 /* Trips5.app */,
+				D4F6F4B02998583C0000F33C /* Trips5UnitTests.xctest */,
+				D4F6F4BD2998584B0000F33C /* Trips5UIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4019CD028A60767001A1A37 /* Trips5 */ = {
+			isa = PBXGroup;
+			children = (
+				D4019CD528A60768001A1A37 /* Assets.xcassets */,
+				D4019CF028A8C2E3001A1A37 /* App */,
+				D4019CD828A60768001A1A37 /* Preview Content */,
+				D4019CD728A60768001A1A37 /* Trips5.entitlements */,
+			);
+			path = Trips5;
+			sourceTree = "<group>";
+		};
+		D4019CD828A60768001A1A37 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D4019CD928A60768001A1A37 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D4019CEF28A8C2CE001A1A37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D489BEB3298EDF8900783DD8 /* Dashboard */,
+				D4CF8C5628C70E14006AFC56 /* Fuel */,
+				D4019CF328A96BA9001A1A37 /* Settings */,
+				D411051B28D5A43B005C702B /* Trip */,
+				D4019CE328A8A962001A1A37 /* NavView.swift */,
+				D4F6F4AA29982B640000F33C /* NoDataView.swift */,
+				D4CF8C3728BFE143006AFC56 /* Theme.swift */,
+				D4A1D90228D96B1A0072F397 /* ViewUtils.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4019CF028A8C2E3001A1A37 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D4CF8C4128C06463006AFC56 /* Local */,
+				D4CF8C4328C0647A006AFC56 /* Remote */,
+				D4019CEF28A8C2CE001A1A37 /* Views */,
+				D415401F2990B34700B81E18 /* AggregateSqlHelper.swift */,
+				D411052028D5A9B6005C702B /* Constants.swift */,
+				D4019CED28A8C22D001A1A37 /* Database.swift */,
+				D489BEBA298F1B4900783DD8 /* Dependencies.swift */,
+				D4019CF128A95F58001A1A37 /* Environment.swift */,
+				D4CF8C4C28C6EF53006AFC56 /* Extensions.swift */,
+				D4CF8C5B28C870D1006AFC56 /* Formatters.swift */,
+				D4CF8C5728C864AB006AFC56 /* FuelStore.swift */,
+				D457A24728BC356100F8C40A /* RemoteStore.swift */,
+				D4CF8C3928C060D2006AFC56 /* SyncManager.swift */,
+				D4019CD128A60767001A1A37 /* Trips5App.swift */,
+				D411051C28D5A477005C702B /* TripStore.swift */,
+				D4019CE928A8BEFF001A1A37 /* VehicleStore.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D4019CF328A96BA9001A1A37 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D4019CE528A8AA2B001A1A37 /* SettingsView.swift */,
+				D4019CF628A9DC44001A1A37 /* VehicleFormView.swift */,
+				D4019CF428A96BBF001A1A37 /* VehicleListView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D411051B28D5A43B005C702B /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				D411052428D5AC38005C702B /* TripFormView.swift */,
+				D411052228D5ABBF005C702B /* TripFormViewModel.swift */,
+				D4019CD328A60767001A1A37 /* TripsView.swift */,
+				D411051E28D5A812005C702B /* TripsViewModel.swift */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		D466C7BD29985E6000D7448E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D489BEB3298EDF8900783DD8 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				D489BEBC298F684C00783DD8 /* ButtonBarView.swift */,
+				D489BEC0298F861200783DD8 /* CardView.swift */,
+				D489BEB4298EE14600783DD8 /* DashboardView.swift */,
+				D489BEB6298EE5FD00783DD8 /* DashboardViewModel.swift */,
+				D4F6F4A6299756C20000F33C /* GaugeGroupView.swift */,
+				D415401D2990B08D00B81E18 /* GaugeView.swift */,
+				D489BEBE298F802500783DD8 /* LineChart.swift */,
+				D41540212991E5E400B81E18 /* LineGraphView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		D4CF8C4128C06463006AFC56 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				D4CF8C4628C47A2B006AFC56 /* Deleted.swift */,
+				D4CF8C4A28C6EC06006AFC56 /* Fuel.swift */,
+				D411051328D5A2D8005C702B /* Trip.swift */,
+				D4019CEB28A8BF61001A1A37 /* Vehicle.swift */,
+				D4CF8C5928C86555006AFC56 /* VehicleFuel.swift */,
+				D411051528D5A2E1005C702B /* VehicleTrip.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		D4CF8C4328C0647A006AFC56 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				D4CF8C4428C2F627006AFC56 /* SyncRequest.swift */,
+				D4CF8C4828C47AA5006AFC56 /* Trips5Deleted.swift */,
+				D4283F3B28D4008A003EA864 /* Trips5Fuel.swift */,
+				D411051928D5A3E0005C702B /* Trips5Trip.swift */,
+				D4CF8C3F28C063EC006AFC56 /* Trips5Vehicle.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		D4CF8C5628C70E14006AFC56 /* Fuel */ = {
+			isa = PBXGroup;
+			children = (
+				D4283F3928D3FFE7003EA864 /* FuelFormView.swift */,
+				D4283F3D28D40A7E003EA864 /* FuelFormViewModel.swift */,
+				D4019CE728A8AB01001A1A37 /* FuelsView.swift */,
+				D4CF8C5428C706E1006AFC56 /* FuelsViewModel.swift */,
+			);
+			path = Fuel;
+			sourceTree = "<group>";
+		};
+		D4F6F4B12998583C0000F33C /* Trips5UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				D466C7C42998A98800D7448E /* EnvTests.swift */,
+				D466C7C62998AAC500D7448E /* ExtensionsTests.swift */,
+				D466C7C22998A76400D7448E /* FormattersTests.swift */,
+				D466C7C82998B41B00D7448E /* ModelTests.swift */,
+			);
+			path = Trips5UnitTests;
+			sourceTree = "<group>";
+		};
+		D4F6F4BE2998584B0000F33C /* Trips5UIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4F6F4BF2998584B0000F33C /* Trips5UIUITests.swift */,
+			);
+			path = Trips5UIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4019CCD28A60767001A1A37 /* Trips5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4019CDD28A60768001A1A37 /* Build configuration list for PBXNativeTarget "Trips5" */;
+			buildPhases = (
+				D4019CCA28A60767001A1A37 /* Sources */,
+				D4019CCB28A60767001A1A37 /* Frameworks */,
+				D4019CCC28A60767001A1A37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Trips5;
+			packageProductDependencies = (
+				D4283F3728D3FC73003EA864 /* GRDB */,
+			);
+			productName = Trips5;
+			productReference = D4019CCE28A60767001A1A37 /* Trips5.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4F6F4AF2998583C0000F33C /* Trips5UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4F6F4B62998583C0000F33C /* Build configuration list for PBXNativeTarget "Trips5UnitTests" */;
+			buildPhases = (
+				D4F6F4AC2998583C0000F33C /* Sources */,
+				D4F6F4AD2998583C0000F33C /* Frameworks */,
+				D4F6F4AE2998583C0000F33C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4F6F4B52998583C0000F33C /* PBXTargetDependency */,
+			);
+			name = Trips5UnitTests;
+			packageProductDependencies = (
+				D466C7BE29985E6000D7448E /* GRDB */,
+			);
+			productName = Trips5UnitTests;
+			productReference = D4F6F4B02998583C0000F33C /* Trips5UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4F6F4BC2998584B0000F33C /* Trips5UIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4F6F4C52998584B0000F33C /* Build configuration list for PBXNativeTarget "Trips5UIUITests" */;
+			buildPhases = (
+				D4F6F4B92998584B0000F33C /* Sources */,
+				D4F6F4BA2998584B0000F33C /* Frameworks */,
+				D4F6F4BB2998584B0000F33C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4F6F4C42998584B0000F33C /* PBXTargetDependency */,
+			);
+			name = Trips5UIUITests;
+			packageProductDependencies = (
+				D466C7C029985E6600D7448E /* GRDB */,
+			);
+			productName = Trips5UIUITests;
+			productReference = D4F6F4BD2998584B0000F33C /* Trips5UIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4019CC628A60767001A1A37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D4019CCD28A60767001A1A37 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					D4F6F4AF2998583C0000F33C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D4019CCD28A60767001A1A37;
+					};
+					D4F6F4BC2998584B0000F33C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D4019CCD28A60767001A1A37;
+					};
+				};
+			};
+			buildConfigurationList = D4019CC928A60767001A1A37 /* Build configuration list for PBXProject "Trips5" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4019CC528A60767001A1A37;
+			packageReferences = (
+				D4283F3628D3FC73003EA864 /* XCRemoteSwiftPackageReference "GRDB" */,
+			);
+			productRefGroup = D4019CCF28A60767001A1A37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4019CCD28A60767001A1A37 /* Trips5 */,
+				D4F6F4AF2998583C0000F33C /* Trips5UnitTests */,
+				D4F6F4BC2998584B0000F33C /* Trips5UIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4019CCC28A60767001A1A37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4019CDA28A60768001A1A37 /* Preview Assets.xcassets in Resources */,
+				D4019CD628A60768001A1A37 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F6F4AE2998583C0000F33C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F6F4BB2998584B0000F33C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4019CCA28A60767001A1A37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D411051428D5A2D8005C702B /* Trip.swift in Sources */,
+				D411052528D5AC38005C702B /* TripFormView.swift in Sources */,
+				D489BEBD298F684C00783DD8 /* ButtonBarView.swift in Sources */,
+				D4019CEE28A8C22D001A1A37 /* Database.swift in Sources */,
+				D4CF8C5A28C86555006AFC56 /* VehicleFuel.swift in Sources */,
+				D4019CF728A9DC44001A1A37 /* VehicleFormView.swift in Sources */,
+				D4CF8C4528C2F627006AFC56 /* SyncRequest.swift in Sources */,
+				D411051628D5A2E1005C702B /* VehicleTrip.swift in Sources */,
+				D4019CE828A8AB01001A1A37 /* FuelsView.swift in Sources */,
+				D4F6F4AB29982B640000F33C /* NoDataView.swift in Sources */,
+				D4CF8C5C28C870D1006AFC56 /* Formatters.swift in Sources */,
+				D411052328D5ABBF005C702B /* TripFormViewModel.swift in Sources */,
+				D4019CE428A8A962001A1A37 /* NavView.swift in Sources */,
+				D415401E2990B08D00B81E18 /* GaugeView.swift in Sources */,
+				D4019CE628A8AA2B001A1A37 /* SettingsView.swift in Sources */,
+				D489BEBF298F802500783DD8 /* LineChart.swift in Sources */,
+				D4CF8C4B28C6EC06006AFC56 /* Fuel.swift in Sources */,
+				D4CF8C3A28C060D2006AFC56 /* SyncManager.swift in Sources */,
+				D411051A28D5A3E0005C702B /* Trips5Trip.swift in Sources */,
+				D4CF8C4D28C6EF53006AFC56 /* Extensions.swift in Sources */,
+				D4019CF228A95F58001A1A37 /* Environment.swift in Sources */,
+				D4F6F4A7299756C20000F33C /* GaugeGroupView.swift in Sources */,
+				D4019CF528A96BBF001A1A37 /* VehicleListView.swift in Sources */,
+				D4CF8C4728C47A2B006AFC56 /* Deleted.swift in Sources */,
+				D4CF8C4928C47AA5006AFC56 /* Trips5Deleted.swift in Sources */,
+				D411052128D5A9B6005C702B /* Constants.swift in Sources */,
+				D4019CD428A60767001A1A37 /* TripsView.swift in Sources */,
+				D4CF8C5528C706E1006AFC56 /* FuelsViewModel.swift in Sources */,
+				D4CF8C5828C864AB006AFC56 /* FuelStore.swift in Sources */,
+				D4283F3C28D4008A003EA864 /* Trips5Fuel.swift in Sources */,
+				D4019CEC28A8BF61001A1A37 /* Vehicle.swift in Sources */,
+				D489BEC1298F861200783DD8 /* CardView.swift in Sources */,
+				D457A24828BC356100F8C40A /* RemoteStore.swift in Sources */,
+				D489BEBB298F1B4900783DD8 /* Dependencies.swift in Sources */,
+				D489BEB5298EE14600783DD8 /* DashboardView.swift in Sources */,
+				D4A1D90328D96B1A0072F397 /* ViewUtils.swift in Sources */,
+				D41540202990B34700B81E18 /* AggregateSqlHelper.swift in Sources */,
+				D411051D28D5A477005C702B /* TripStore.swift in Sources */,
+				D4019CEA28A8BEFF001A1A37 /* VehicleStore.swift in Sources */,
+				D4019CD228A60767001A1A37 /* Trips5App.swift in Sources */,
+				D4CF8C3828BFE143006AFC56 /* Theme.swift in Sources */,
+				D4283F3A28D3FFE7003EA864 /* FuelFormView.swift in Sources */,
+				D411051F28D5A812005C702B /* TripsViewModel.swift in Sources */,
+				D41540222991E5E400B81E18 /* LineGraphView.swift in Sources */,
+				D489BEB7298EE5FD00783DD8 /* DashboardViewModel.swift in Sources */,
+				D4283F3E28D40A7E003EA864 /* FuelFormViewModel.swift in Sources */,
+				D4CF8C4028C063EC006AFC56 /* Trips5Vehicle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F6F4AC2998583C0000F33C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4F6F50A29985AC10000F33C /* Dependencies.swift in Sources */,
+				D4F6F4E129985AAD0000F33C /* GaugeGroupView.swift in Sources */,
+				D4F6F4CB29985AA00000F33C /* VehicleFuel.swift in Sources */,
+				D4F6F51229985AC10000F33C /* Theme.swift in Sources */,
+				D4F6F4E329985AAD0000F33C /* LineChart.swift in Sources */,
+				D4F6F4D729985AA70000F33C /* Trips5Fuel.swift in Sources */,
+				D466C7C92998B41B00D7448E /* ModelTests.swift in Sources */,
+				D4F6F4D429985AA70000F33C /* Trips5Trip.swift in Sources */,
+				D4F6F4CC29985AA00000F33C /* Fuel.swift in Sources */,
+				D4F6F4E429985AAD0000F33C /* LineGraphView.swift in Sources */,
+				D4F6F4F029985AB30000F33C /* FuelsViewModel.swift in Sources */,
+				D4F6F4E029985AAD0000F33C /* CardView.swift in Sources */,
+				D4F6F50E29985AC10000F33C /* VehicleStore.swift in Sources */,
+				D4F6F4FC29985ABB0000F33C /* TripFormViewModel.swift in Sources */,
+				D4F6F51429985AC10000F33C /* NoDataView.swift in Sources */,
+				D4F6F4CA29985AA00000F33C /* Vehicle.swift in Sources */,
+				D4F6F4C829985AA00000F33C /* Trip.swift in Sources */,
+				D4F6F4E529985AAD0000F33C /* ButtonBarView.swift in Sources */,
+				D4F6F4FF29985ABB0000F33C /* TripsViewModel.swift in Sources */,
+				D4F6F50F29985AC10000F33C /* FuelStore.swift in Sources */,
+				D4F6F50929985AC10000F33C /* Extensions.swift in Sources */,
+				D4F6F4DE29985AAD0000F33C /* GaugeView.swift in Sources */,
+				D4F6F50C29985AC10000F33C /* Formatters.swift in Sources */,
+				D4F6F50729985AC10000F33C /* SyncManager.swift in Sources */,
+				D4F6F4FE29985ABB0000F33C /* TripsView.swift in Sources */,
+				D4F6F4F629985AB70000F33C /* VehicleFormView.swift in Sources */,
+				D466C7C72998AAC500D7448E /* ExtensionsTests.swift in Sources */,
+				D4F6F4E229985AAD0000F33C /* DashboardView.swift in Sources */,
+				D4F6F51029985AC10000F33C /* RemoteStore.swift in Sources */,
+				D4F6F4D629985AA70000F33C /* SyncRequest.swift in Sources */,
+				D4F6F4F129985AB30000F33C /* FuelFormView.swift in Sources */,
+				D4F6F51329985AC10000F33C /* NavView.swift in Sources */,
+				D4F6F51129985AC10000F33C /* Trips5App.swift in Sources */,
+				D4F6F50829985AC10000F33C /* AggregateSqlHelper.swift in Sources */,
+				D4F6F4D829985AA70000F33C /* Trips5Deleted.swift in Sources */,
+				D4F6F4EF29985AB30000F33C /* FuelsView.swift in Sources */,
+				D4F6F50529985AC10000F33C /* Constants.swift in Sources */,
+				D4F6F4FD29985ABB0000F33C /* TripFormView.swift in Sources */,
+				D466C7C32998A76400D7448E /* FormattersTests.swift in Sources */,
+				D4F6F50D29985AC10000F33C /* ViewUtils.swift in Sources */,
+				D4F6F4EE29985AB30000F33C /* FuelFormViewModel.swift in Sources */,
+				D4F6F4F829985AB70000F33C /* SettingsView.swift in Sources */,
+				D4F6F4CD29985AA00000F33C /* VehicleTrip.swift in Sources */,
+				D4F6F50629985AC10000F33C /* TripStore.swift in Sources */,
+				D4F6F4C929985AA00000F33C /* Deleted.swift in Sources */,
+				D4F6F50B29985AC10000F33C /* Environment.swift in Sources */,
+				D4F6F4D529985AA70000F33C /* Trips5Vehicle.swift in Sources */,
+				D4F6F4DF29985AAD0000F33C /* DashboardViewModel.swift in Sources */,
+				D4F6F50429985AC10000F33C /* Database.swift in Sources */,
+				D4F6F4F729985AB70000F33C /* VehicleListView.swift in Sources */,
+				D466C7C52998A98800D7448E /* EnvTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F6F4B92998584B0000F33C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4F6F52129985AC20000F33C /* RemoteStore.swift in Sources */,
+				D4F6F51829985AC20000F33C /* SyncManager.swift in Sources */,
+				D4F6F52229985AC20000F33C /* Trips5App.swift in Sources */,
+				D4F6F4F229985AB30000F33C /* FuelFormViewModel.swift in Sources */,
+				D4F6F51629985AC20000F33C /* Constants.swift in Sources */,
+				D4F6F51B29985AC20000F33C /* Dependencies.swift in Sources */,
+				D4F6F4D229985AA10000F33C /* Fuel.swift in Sources */,
+				D4F6F4F429985AB30000F33C /* FuelsViewModel.swift in Sources */,
+				D4F6F4F529985AB30000F33C /* FuelFormView.swift in Sources */,
+				D4F6F4ED29985AAD0000F33C /* ButtonBarView.swift in Sources */,
+				D4F6F51A29985AC20000F33C /* Extensions.swift in Sources */,
+				D4F6F51C29985AC20000F33C /* Environment.swift in Sources */,
+				D4F6F4CE29985AA10000F33C /* Trip.swift in Sources */,
+				D4F6F4D329985AA10000F33C /* VehicleTrip.swift in Sources */,
+				D4F6F4D929985AA80000F33C /* Trips5Trip.swift in Sources */,
+				D4F6F51E29985AC20000F33C /* ViewUtils.swift in Sources */,
+				D4F6F50129985ABC0000F33C /* TripFormView.swift in Sources */,
+				D4F6F50229985ABC0000F33C /* TripsView.swift in Sources */,
+				D4F6F51929985AC20000F33C /* AggregateSqlHelper.swift in Sources */,
+				D4F6F4DD29985AA80000F33C /* Trips5Deleted.swift in Sources */,
+				D4F6F52029985AC20000F33C /* FuelStore.swift in Sources */,
+				D4F6F51529985AC20000F33C /* Database.swift in Sources */,
+				D4F6F4E729985AAD0000F33C /* DashboardViewModel.swift in Sources */,
+				D4F6F52529985AC20000F33C /* NoDataView.swift in Sources */,
+				D4F6F52429985AC20000F33C /* NavView.swift in Sources */,
+				D4F6F50329985ABC0000F33C /* TripsViewModel.swift in Sources */,
+				D4F6F4EB29985AAD0000F33C /* LineChart.swift in Sources */,
+				D4F6F4E629985AAD0000F33C /* GaugeView.swift in Sources */,
+				D4F6F4C02998584B0000F33C /* Trips5UIUITests.swift in Sources */,
+				D4F6F4D029985AA10000F33C /* Vehicle.swift in Sources */,
+				D4F6F4EC29985AAD0000F33C /* LineGraphView.swift in Sources */,
+				D4F6F4E929985AAD0000F33C /* GaugeGroupView.swift in Sources */,
+				D4F6F4FA29985AB70000F33C /* VehicleListView.swift in Sources */,
+				D4F6F51F29985AC20000F33C /* VehicleStore.swift in Sources */,
+				D4F6F4DA29985AA80000F33C /* Trips5Vehicle.swift in Sources */,
+				D4F6F4D129985AA10000F33C /* VehicleFuel.swift in Sources */,
+				D4F6F4EA29985AAD0000F33C /* DashboardView.swift in Sources */,
+				D4F6F50029985ABC0000F33C /* TripFormViewModel.swift in Sources */,
+				D4F6F4FB29985AB70000F33C /* SettingsView.swift in Sources */,
+				D4F6F4DB29985AA80000F33C /* SyncRequest.swift in Sources */,
+				D4F6F4F929985AB70000F33C /* VehicleFormView.swift in Sources */,
+				D4F6F4DC29985AA80000F33C /* Trips5Fuel.swift in Sources */,
+				D4F6F51729985AC20000F33C /* TripStore.swift in Sources */,
+				D4F6F51D29985AC20000F33C /* Formatters.swift in Sources */,
+				D4F6F52329985AC20000F33C /* Theme.swift in Sources */,
+				D4F6F4F329985AB30000F33C /* FuelsView.swift in Sources */,
+				D4F6F4E829985AAD0000F33C /* CardView.swift in Sources */,
+				D4F6F4CF29985AA10000F33C /* Deleted.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4F6F4B52998583C0000F33C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4019CCD28A60767001A1A37 /* Trips5 */;
+			targetProxy = D4F6F4B42998583C0000F33C /* PBXContainerItemProxy */;
+		};
+		D4F6F4C42998584B0000F33C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4019CCD28A60767001A1A37 /* Trips5 */;
+			targetProxy = D4F6F4C32998584B0000F33C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D4019CDB28A60768001A1A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4019CDC28A60768001A1A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D4019CDE28A60768001A1A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Trips5/Trips5.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Trips5/Preview Content\"";
+				DEVELOPMENT_TEAM = 8BHAP9PT76;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TripsDemo;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rg4dev.Trips5demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4019CDF28A60768001A1A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Trips5/Trips5.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Trips5/Preview Content\"";
+				DEVELOPMENT_TEAM = 8BHAP9PT76;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TripsDemo;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rg4dev.Trips5demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D4F6F4B72998583C0000F33C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BHAP9PT76;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rg4dev.Trips5UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trips5.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Trips5";
+			};
+			name = Debug;
+		};
+		D4F6F4B82998583C0000F33C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BHAP9PT76;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rg4dev.Trips5UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trips5.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Trips5";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4F6F4C62998584B0000F33C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BHAP9PT76;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rg4dev.Trips5UIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Trips5;
+			};
+			name = Debug;
+		};
+		D4F6F4C72998584B0000F33C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BHAP9PT76;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rg4dev.Trips5UIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Trips5;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4019CC928A60767001A1A37 /* Build configuration list for PBXProject "Trips5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4019CDB28A60768001A1A37 /* Debug */,
+				D4019CDC28A60768001A1A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4019CDD28A60768001A1A37 /* Build configuration list for PBXNativeTarget "Trips5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4019CDE28A60768001A1A37 /* Debug */,
+				D4019CDF28A60768001A1A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4F6F4B62998583C0000F33C /* Build configuration list for PBXNativeTarget "Trips5UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4F6F4B72998583C0000F33C /* Debug */,
+				D4F6F4B82998583C0000F33C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4F6F4C52998584B0000F33C /* Build configuration list for PBXNativeTarget "Trips5UIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4F6F4C62998584B0000F33C /* Debug */,
+				D4F6F4C72998584B0000F33C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4283F3628D3FC73003EA864 /* XCRemoteSwiftPackageReference "GRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4283F3728D3FC73003EA864 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4283F3628D3FC73003EA864 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+		D466C7BE29985E6000D7448E /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4283F3628D3FC73003EA864 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+		D466C7C029985E6600D7448E /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4283F3628D3FC73003EA864 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D4019CC628A60767001A1A37 /* Project object */;
+}
