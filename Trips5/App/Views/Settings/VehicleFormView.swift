@@ -29,8 +29,7 @@ struct VehicleFormView: View {
         NavigationStack {
             Form {
                 Section(header: Text("")) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Name").font(Font.caption2).foregroundColor(Color(uiColor: dependencies.theme.tintColor))
+                    FormRow(label: "Name") {
                         TextField("", text: $vehicle.name)
                             .focused($focusedField, equals: .field)
                             .task {
@@ -53,17 +52,11 @@ struct VehicleFormView: View {
             }
             .navigationTitle("Vehicle").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        Task {
-                            await dependencies.vehicleStore.upsert(vehicle)
-                        }
-                        dismiss()
-                    }, label: {
-                        Text("Save")
-                    })
-                    .accessibilityIdentifier("vehicleSaveButton")
-                    .accessibilityLabel("Save Fuel")
+                FormToolbar(canSave: true) {
+                    Task {
+                        await dependencies.vehicleStore.upsert(vehicle)
+                    }
+                    dismiss()
                 }
             }
         }

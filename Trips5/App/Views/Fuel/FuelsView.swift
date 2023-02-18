@@ -35,28 +35,10 @@ struct FuelsView: View {
     var body: some View {
         NavigationStack(path: $presentedNumbers) {
             List {
-                ForEach(fuelsViewModel.fuelSections, id: \.self) { fuelSection in
+                ForEach(fuelsViewModel.sections, id: \.self) { fuelSection in
                     Section(fuelSection.description) {
-                        ForEach(fuelSection.fuels, id: \.self) { vehicleFuel in
-                            Button(action: {
-                                fuelToEdit = vehicleFuel
-                            }, label: {
-                                HStack {
-                                    Text(formatter.dayMonthOnly.string(from: vehicleFuel.date))
-                                        .foregroundColor(Color(uiColor: UIColor.label))
-                                    Spacer()
-                                    VStack(alignment: .trailing, spacing: 4) {
-                                        Text(String(format: "%.2f mpg", vehicleFuel.fuel.mpg)).font(Font.footnote)
-                                            .foregroundColor(Color(uiColor: UIColor.label))
-                                        Text("\(vehicleFuel.fuel.toOdo)").font(Font.footnote)
-                                            .foregroundColor(Color(uiColor: UIColor.label))
-                                    }
-                                    if vehicleFuel.fuel.dirty && env.host != .none {
-                                        Image(systemName: "arrow.triangle.2.circlepath").foregroundColor(Color.blue)
-                                    }
-                                }
-                            })
-                            .listRowInsets(Constants.listInsets)
+                        ForEach(fuelSection.items, id: \.self) { vehicleFuel in
+                            FuelCellView(dependencies, fuelToEdit: $fuelToEdit, vehicleFuel: vehicleFuel)
                             .onAppear {
                                 fuelsViewModel.itemAppeared(vehicleFuel)
                             }
@@ -80,7 +62,7 @@ struct FuelsView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         if let actVeh = vehicleStore.active {
-                            let fuel = Fuel.new(for: actVeh, withPrevTOdo: fuelsViewModel.allFuels.first?.fuel.toOdo ?? 0)
+                            let fuel = Fuel.new(for: actVeh, withPrevTOdo: fuelsViewModel.all.first?.fuel.toOdo ?? 0)
                             fuelToEdit = VehicleFuel(vehicle: actVeh, fuel: fuel)
                         }
                     }, label: {

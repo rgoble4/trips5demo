@@ -10,4 +10,6 @@ import UIKit
 
 struct Theme {
     var tintColor: UIColor = UIColor.systemBlue
+    
+    var primaryTextColor: UIColor = UIColor.label
 }

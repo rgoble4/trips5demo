@@ -35,28 +35,10 @@ struct TripsView: View {
     var body: some View {
         NavigationStack(path: $presentedNumbers) {
             List {
-                ForEach(tripsViewModel.tripSections, id: \.self) { tripSection in
+                ForEach(tripsViewModel.sections, id: \.self) { tripSection in
                     Section(tripSection.description) {
-                        ForEach(tripSection.trips, id: \.self) { vehicleTrip in
-                            Button(action: {
-                                tripToEdit = vehicleTrip
-                            }, label: {
-                                HStack {
-                                    Text(formatter.dayMonthOnly.string(from: vehicleTrip.date))
-                                        .foregroundColor(Color(uiColor: UIColor.label))
-                                    Spacer()
-                                    VStack(alignment: .trailing, spacing: 4) {
-                                        Text("\(vehicleTrip.trip.distance)").font(Font.footnote)
-                                            .foregroundColor(Color(uiColor: UIColor.label))
-                                        Text("\(vehicleTrip.trip.toOdo)").font(Font.footnote)
-                                            .foregroundColor(Color(uiColor: UIColor.label))
-                                    }
-                                    if vehicleTrip.trip.dirty && env.host != .none {
-                                        Image(systemName: "arrow.triangle.2.circlepath").foregroundColor(Color.blue)
-                                    }
-                                }
-                            })
-                            .listRowInsets(Constants.listInsets)
+                        ForEach(tripSection.items, id: \.self) { vehicleTrip in
+                            TripCellView(dependencies, tripToEdit: $tripToEdit, vehicleTrip: vehicleTrip)
                             .onAppear {
                                 tripsViewModel.itemAppeared(vehicleTrip)
                             }
@@ -80,7 +62,7 @@ struct TripsView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         if let actVeh = vehicleStore.active {
-                            let trip = Trip.new(for: actVeh, withPrevTOdo: tripsViewModel.allTrips.first?.trip.toOdo ?? 0)
+                            let trip = Trip.new(for: actVeh, withPrevTOdo: tripsViewModel.all.first?.trip.toOdo ?? 0)
                             tripToEdit = VehicleTrip(vehicle: actVeh, trip: trip)
                         }
                     }, label: {

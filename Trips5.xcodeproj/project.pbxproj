@@ -49,6 +49,15 @@
 		D489BEBF298F802500783DD8 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBE298F802500783DD8 /* LineChart.swift */; };
 		D489BEC1298F861200783DD8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEC0298F861200783DD8 /* CardView.swift */; };
 		D4A1D90328D96B1A0072F397 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A1D90228D96B1A0072F397 /* ViewUtils.swift */; };
+		D4CB816029A0776600B2A219 /* TripCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB815F29A0776600B2A219 /* TripCellView.swift */; };
+		D4CB816129A0776600B2A219 /* TripCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB815F29A0776600B2A219 /* TripCellView.swift */; };
+		D4CB816229A0776600B2A219 /* TripCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB815F29A0776600B2A219 /* TripCellView.swift */; };
+		D4CB816429A0896800B2A219 /* PagingEnabledViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB816329A0896800B2A219 /* PagingEnabledViewModel.swift */; };
+		D4CB816529A0896800B2A219 /* PagingEnabledViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB816329A0896800B2A219 /* PagingEnabledViewModel.swift */; };
+		D4CB816629A0896800B2A219 /* PagingEnabledViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB816329A0896800B2A219 /* PagingEnabledViewModel.swift */; };
+		D4CB816829A16CAA00B2A219 /* ListDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB816729A16CAA00B2A219 /* ListDataCell.swift */; };
+		D4CB816929A16CAA00B2A219 /* ListDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB816729A16CAA00B2A219 /* ListDataCell.swift */; };
+		D4CB816A29A16CAA00B2A219 /* ListDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB816729A16CAA00B2A219 /* ListDataCell.swift */; };
 		D4CF8C3828BFE143006AFC56 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3728BFE143006AFC56 /* Theme.swift */; };
 		D4CF8C3A28C060D2006AFC56 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3928C060D2006AFC56 /* SyncManager.swift */; };
 		D4CF8C4028C063EC006AFC56 /* Trips5Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3F28C063EC006AFC56 /* Trips5Vehicle.swift */; };
@@ -61,6 +70,12 @@
 		D4CF8C5828C864AB006AFC56 /* FuelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5728C864AB006AFC56 /* FuelStore.swift */; };
 		D4CF8C5A28C86555006AFC56 /* VehicleFuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5928C86555006AFC56 /* VehicleFuel.swift */; };
 		D4CF8C5C28C870D1006AFC56 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C5B28C870D1006AFC56 /* Formatters.swift */; };
+		D4F2F71C29A182A200544436 /* FormToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2F71B29A182A200544436 /* FormToolbar.swift */; };
+		D4F2F71D29A182A200544436 /* FormToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2F71B29A182A200544436 /* FormToolbar.swift */; };
+		D4F2F71E29A182A200544436 /* FormToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2F71B29A182A200544436 /* FormToolbar.swift */; };
+		D4F2F72429A18AFC00544436 /* FormRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2F72329A18AFC00544436 /* FormRow.swift */; };
+		D4F2F72529A18AFC00544436 /* FormRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2F72329A18AFC00544436 /* FormRow.swift */; };
+		D4F2F72629A18AFC00544436 /* FormRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2F72329A18AFC00544436 /* FormRow.swift */; };
 		D4F6F4A7299756C20000F33C /* GaugeGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4A6299756C20000F33C /* GaugeGroupView.swift */; };
 		D4F6F4AB29982B640000F33C /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4AA29982B640000F33C /* NoDataView.swift */; };
 		D4F6F4C02998584B0000F33C /* Trips5UIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4BF2998584B0000F33C /* Trips5UIUITests.swift */; };
@@ -158,6 +173,9 @@
 		D4F6F52329985AC20000F33C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF8C3728BFE143006AFC56 /* Theme.swift */; };
 		D4F6F52429985AC20000F33C /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4019CE328A8A962001A1A37 /* NavView.swift */; };
 		D4F6F52529985AC20000F33C /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4AA29982B640000F33C /* NoDataView.swift */; };
+		D4F9DCCE2999E29A00290EF3 /* FuelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F9DCCD2999E29A00290EF3 /* FuelCellView.swift */; };
+		D4F9DCCF2999E29A00290EF3 /* FuelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F9DCCD2999E29A00290EF3 /* FuelCellView.swift */; };
+		D4F9DCD02999E29A00290EF3 /* FuelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F9DCCD2999E29A00290EF3 /* FuelCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +237,9 @@
 		D489BEBE298F802500783DD8 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		D489BEC0298F861200783DD8 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D4A1D90228D96B1A0072F397 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		D4CB815F29A0776600B2A219 /* TripCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellView.swift; sourceTree = "<group>"; };
+		D4CB816329A0896800B2A219 /* PagingEnabledViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingEnabledViewModel.swift; sourceTree = "<group>"; };
+		D4CB816729A16CAA00B2A219 /* ListDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataCell.swift; sourceTree = "<group>"; };
 		D4CF8C3728BFE143006AFC56 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D4CF8C3928C060D2006AFC56 /* SyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
 		D4CF8C3F28C063EC006AFC56 /* Trips5Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips5Vehicle.swift; sourceTree = "<group>"; };
@@ -231,11 +252,14 @@
 		D4CF8C5728C864AB006AFC56 /* FuelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStore.swift; sourceTree = "<group>"; };
 		D4CF8C5928C86555006AFC56 /* VehicleFuel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFuel.swift; sourceTree = "<group>"; };
 		D4CF8C5B28C870D1006AFC56 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		D4F2F71B29A182A200544436 /* FormToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormToolbar.swift; sourceTree = "<group>"; };
+		D4F2F72329A18AFC00544436 /* FormRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRow.swift; sourceTree = "<group>"; };
 		D4F6F4A6299756C20000F33C /* GaugeGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeGroupView.swift; sourceTree = "<group>"; };
 		D4F6F4AA29982B640000F33C /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 		D4F6F4B02998583C0000F33C /* Trips5UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Trips5UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F6F4BD2998584B0000F33C /* Trips5UIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Trips5UIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F6F4BF2998584B0000F33C /* Trips5UIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips5UIUITests.swift; sourceTree = "<group>"; };
+		D4F9DCCD2999E29A00290EF3 /* FuelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,12 +333,11 @@
 		D4019CEF28A8C2CE001A1A37 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D4F2F71A29A17EAA00544436 /* Common */,
 				D489BEB3298EDF8900783DD8 /* Dashboard */,
 				D4CF8C5628C70E14006AFC56 /* Fuel */,
 				D4019CF328A96BA9001A1A37 /* Settings */,
 				D411051B28D5A43B005C702B /* Trip */,
-				D4019CE328A8A962001A1A37 /* NavView.swift */,
-				D4F6F4AA29982B640000F33C /* NoDataView.swift */,
 				D4CF8C3728BFE143006AFC56 /* Theme.swift */,
 				D4A1D90228D96B1A0072F397 /* ViewUtils.swift */,
 			);
@@ -357,6 +380,7 @@
 		D411051B28D5A43B005C702B /* Trip */ = {
 			isa = PBXGroup;
 			children = (
+				D4CB815F29A0776600B2A219 /* TripCellView.swift */,
 				D411052428D5AC38005C702B /* TripFormView.swift */,
 				D411052228D5ABBF005C702B /* TripFormViewModel.swift */,
 				D4019CD328A60767001A1A37 /* TripsView.swift */,
@@ -415,12 +439,26 @@
 		D4CF8C5628C70E14006AFC56 /* Fuel */ = {
 			isa = PBXGroup;
 			children = (
+				D4F9DCCD2999E29A00290EF3 /* FuelCellView.swift */,
 				D4283F3928D3FFE7003EA864 /* FuelFormView.swift */,
 				D4283F3D28D40A7E003EA864 /* FuelFormViewModel.swift */,
 				D4019CE728A8AB01001A1A37 /* FuelsView.swift */,
 				D4CF8C5428C706E1006AFC56 /* FuelsViewModel.swift */,
 			);
 			path = Fuel;
+			sourceTree = "<group>";
+		};
+		D4F2F71A29A17EAA00544436 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D4F2F72329A18AFC00544436 /* FormRow.swift */,
+				D4F2F71B29A182A200544436 /* FormToolbar.swift */,
+				D4CB816729A16CAA00B2A219 /* ListDataCell.swift */,
+				D4019CE328A8A962001A1A37 /* NavView.swift */,
+				D4F6F4AA29982B640000F33C /* NoDataView.swift */,
+				D4CB816329A0896800B2A219 /* PagingEnabledViewModel.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D4F6F4B12998583C0000F33C /* Trips5UnitTests */ = {
@@ -588,10 +626,12 @@
 				D411052528D5AC38005C702B /* TripFormView.swift in Sources */,
 				D489BEBD298F684C00783DD8 /* ButtonBarView.swift in Sources */,
 				D4019CEE28A8C22D001A1A37 /* Database.swift in Sources */,
+				D4CB816429A0896800B2A219 /* PagingEnabledViewModel.swift in Sources */,
 				D4CF8C5A28C86555006AFC56 /* VehicleFuel.swift in Sources */,
 				D4019CF728A9DC44001A1A37 /* VehicleFormView.swift in Sources */,
 				D4CF8C4528C2F627006AFC56 /* SyncRequest.swift in Sources */,
 				D411051628D5A2E1005C702B /* VehicleTrip.swift in Sources */,
+				D4CB816029A0776600B2A219 /* TripCellView.swift in Sources */,
 				D4019CE828A8AB01001A1A37 /* FuelsView.swift in Sources */,
 				D4F6F4AB29982B640000F33C /* NoDataView.swift in Sources */,
 				D4CF8C5C28C870D1006AFC56 /* Formatters.swift in Sources */,
@@ -602,8 +642,10 @@
 				D489BEBF298F802500783DD8 /* LineChart.swift in Sources */,
 				D4CF8C4B28C6EC06006AFC56 /* Fuel.swift in Sources */,
 				D4CF8C3A28C060D2006AFC56 /* SyncManager.swift in Sources */,
+				D4CB816829A16CAA00B2A219 /* ListDataCell.swift in Sources */,
 				D411051A28D5A3E0005C702B /* Trips5Trip.swift in Sources */,
 				D4CF8C4D28C6EF53006AFC56 /* Extensions.swift in Sources */,
+				D4F2F71C29A182A200544436 /* FormToolbar.swift in Sources */,
 				D4019CF228A95F58001A1A37 /* Environment.swift in Sources */,
 				D4F6F4A7299756C20000F33C /* GaugeGroupView.swift in Sources */,
 				D4019CF528A96BBF001A1A37 /* VehicleListView.swift in Sources */,
@@ -612,6 +654,7 @@
 				D411052128D5A9B6005C702B /* Constants.swift in Sources */,
 				D4019CD428A60767001A1A37 /* TripsView.swift in Sources */,
 				D4CF8C5528C706E1006AFC56 /* FuelsViewModel.swift in Sources */,
+				D4F2F72429A18AFC00544436 /* FormRow.swift in Sources */,
 				D4CF8C5828C864AB006AFC56 /* FuelStore.swift in Sources */,
 				D4283F3C28D4008A003EA864 /* Trips5Fuel.swift in Sources */,
 				D4019CEC28A8BF61001A1A37 /* Vehicle.swift in Sources */,
@@ -620,6 +663,7 @@
 				D489BEBB298F1B4900783DD8 /* Dependencies.swift in Sources */,
 				D489BEB5298EE14600783DD8 /* DashboardView.swift in Sources */,
 				D4A1D90328D96B1A0072F397 /* ViewUtils.swift in Sources */,
+				D4F9DCCE2999E29A00290EF3 /* FuelCellView.swift in Sources */,
 				D41540202990B34700B81E18 /* AggregateSqlHelper.swift in Sources */,
 				D411051D28D5A477005C702B /* TripStore.swift in Sources */,
 				D4019CEA28A8BEFF001A1A37 /* VehicleStore.swift in Sources */,
@@ -646,6 +690,7 @@
 				D4F6F4D729985AA70000F33C /* Trips5Fuel.swift in Sources */,
 				D466C7C92998B41B00D7448E /* ModelTests.swift in Sources */,
 				D4F6F4D429985AA70000F33C /* Trips5Trip.swift in Sources */,
+				D4CB816129A0776600B2A219 /* TripCellView.swift in Sources */,
 				D4F6F4CC29985AA00000F33C /* Fuel.swift in Sources */,
 				D4F6F4E429985AAD0000F33C /* LineGraphView.swift in Sources */,
 				D4F6F4F029985AB30000F33C /* FuelsViewModel.swift in Sources */,
@@ -655,6 +700,7 @@
 				D4F6F51429985AC10000F33C /* NoDataView.swift in Sources */,
 				D4F6F4CA29985AA00000F33C /* Vehicle.swift in Sources */,
 				D4F6F4C829985AA00000F33C /* Trip.swift in Sources */,
+				D4CB816529A0896800B2A219 /* PagingEnabledViewModel.swift in Sources */,
 				D4F6F4E529985AAD0000F33C /* ButtonBarView.swift in Sources */,
 				D4F6F4FF29985ABB0000F33C /* TripsViewModel.swift in Sources */,
 				D4F6F50F29985AC10000F33C /* FuelStore.swift in Sources */,
@@ -669,7 +715,9 @@
 				D4F6F51029985AC10000F33C /* RemoteStore.swift in Sources */,
 				D4F6F4D629985AA70000F33C /* SyncRequest.swift in Sources */,
 				D4F6F4F129985AB30000F33C /* FuelFormView.swift in Sources */,
+				D4CB816929A16CAA00B2A219 /* ListDataCell.swift in Sources */,
 				D4F6F51329985AC10000F33C /* NavView.swift in Sources */,
+				D4F9DCCF2999E29A00290EF3 /* FuelCellView.swift in Sources */,
 				D4F6F51129985AC10000F33C /* Trips5App.swift in Sources */,
 				D4F6F50829985AC10000F33C /* AggregateSqlHelper.swift in Sources */,
 				D4F6F4D829985AA70000F33C /* Trips5Deleted.swift in Sources */,
@@ -677,6 +725,7 @@
 				D4F6F50529985AC10000F33C /* Constants.swift in Sources */,
 				D4F6F4FD29985ABB0000F33C /* TripFormView.swift in Sources */,
 				D466C7C32998A76400D7448E /* FormattersTests.swift in Sources */,
+				D4F2F71D29A182A200544436 /* FormToolbar.swift in Sources */,
 				D4F6F50D29985AC10000F33C /* ViewUtils.swift in Sources */,
 				D4F6F4EE29985AB30000F33C /* FuelFormViewModel.swift in Sources */,
 				D4F6F4F829985AB70000F33C /* SettingsView.swift in Sources */,
@@ -688,6 +737,7 @@
 				D4F6F4DF29985AAD0000F33C /* DashboardViewModel.swift in Sources */,
 				D4F6F50429985AC10000F33C /* Database.swift in Sources */,
 				D4F6F4F729985AB70000F33C /* VehicleListView.swift in Sources */,
+				D4F2F72529A18AFC00544436 /* FormRow.swift in Sources */,
 				D466C7C52998A98800D7448E /* EnvTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,9 +749,11 @@
 				D4F6F52129985AC20000F33C /* RemoteStore.swift in Sources */,
 				D4F6F51829985AC20000F33C /* SyncManager.swift in Sources */,
 				D4F6F52229985AC20000F33C /* Trips5App.swift in Sources */,
+				D4F2F71E29A182A200544436 /* FormToolbar.swift in Sources */,
 				D4F6F4F229985AB30000F33C /* FuelFormViewModel.swift in Sources */,
 				D4F6F51629985AC20000F33C /* Constants.swift in Sources */,
 				D4F6F51B29985AC20000F33C /* Dependencies.swift in Sources */,
+				D4CB816629A0896800B2A219 /* PagingEnabledViewModel.swift in Sources */,
 				D4F6F4D229985AA10000F33C /* Fuel.swift in Sources */,
 				D4F6F4F429985AB30000F33C /* FuelsViewModel.swift in Sources */,
 				D4F6F4F529985AB30000F33C /* FuelFormView.swift in Sources */,
@@ -719,6 +771,7 @@
 				D4F6F52029985AC20000F33C /* FuelStore.swift in Sources */,
 				D4F6F51529985AC20000F33C /* Database.swift in Sources */,
 				D4F6F4E729985AAD0000F33C /* DashboardViewModel.swift in Sources */,
+				D4CB816A29A16CAA00B2A219 /* ListDataCell.swift in Sources */,
 				D4F6F52529985AC20000F33C /* NoDataView.swift in Sources */,
 				D4F6F52429985AC20000F33C /* NavView.swift in Sources */,
 				D4F6F50329985ABC0000F33C /* TripsViewModel.swift in Sources */,
@@ -730,6 +783,7 @@
 				D4F6F4E929985AAD0000F33C /* GaugeGroupView.swift in Sources */,
 				D4F6F4FA29985AB70000F33C /* VehicleListView.swift in Sources */,
 				D4F6F51F29985AC20000F33C /* VehicleStore.swift in Sources */,
+				D4F2F72629A18AFC00544436 /* FormRow.swift in Sources */,
 				D4F6F4DA29985AA80000F33C /* Trips5Vehicle.swift in Sources */,
 				D4F6F4D129985AA10000F33C /* VehicleFuel.swift in Sources */,
 				D4F6F4EA29985AAD0000F33C /* DashboardView.swift in Sources */,
@@ -737,10 +791,12 @@
 				D4F6F4FB29985AB70000F33C /* SettingsView.swift in Sources */,
 				D4F6F4DB29985AA80000F33C /* SyncRequest.swift in Sources */,
 				D4F6F4F929985AB70000F33C /* VehicleFormView.swift in Sources */,
+				D4CB816229A0776600B2A219 /* TripCellView.swift in Sources */,
 				D4F6F4DC29985AA80000F33C /* Trips5Fuel.swift in Sources */,
 				D4F6F51729985AC20000F33C /* TripStore.swift in Sources */,
 				D4F6F51D29985AC20000F33C /* Formatters.swift in Sources */,
 				D4F6F52329985AC20000F33C /* Theme.swift in Sources */,
+				D4F9DCD02999E29A00290EF3 /* FuelCellView.swift in Sources */,
 				D4F6F4F329985AB30000F33C /* FuelsView.swift in Sources */,
 				D4F6F4E829985AAD0000F33C /* CardView.swift in Sources */,
 				D4F6F4CF29985AA10000F33C /* Deleted.swift in Sources */,

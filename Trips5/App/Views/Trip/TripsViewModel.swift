@@ -9,14 +9,17 @@ import Combine
 import Foundation
 import GRDB
 
-actor TripsViewModel: ObservableObject {
+actor TripsViewModel: ObservableObject, PagingEnabledViewModel {
     typealias Dependencies = DatabaseProvider & FormatterProvider & VehicleStoreProvider
+    
+    typealias Item = VehicleTrip
+    typealias Section = TripSection
     
     struct TripSection: Identifiable, Hashable {
         var id: String
         var description: String
-        var trips: [VehicleTrip]
-        
+        var items: [VehicleTrip]
+
         func hash(into hasher: inout Hasher) {
             hasher.combine(id)
         }
@@ -24,20 +27,20 @@ actor TripsViewModel: ObservableObject {
     
     @MainActor
     @Published
-    var tripSections = [TripSection]()
+    var sections = [TripSection]()
     
     private let db: Database
     private let formatter: Formatter
     private let vehicleStore: VehicleStore
     
     @MainActor
-    private var page = 1
+    var page = 1
     @MainActor
-    var allTrips = [VehicleTrip]()
+    var all = [VehicleTrip]()
     @MainActor
-    private var tripIdxById = [String: Int]()
+    var itemIdxById = [String: Int]()
     @MainActor
-    private var totalTripCount = 0
+    var totalCount = 0
     
     private var tripsSub: AnyCancellable?
     
@@ -57,32 +60,24 @@ actor TripsViewModel: ObservableObject {
         }
     }
     
-    @MainActor
-    func itemAppeared(_ trip: VehicleTrip) {
-        guard allTrips.count > 0,
-              let index = tripIdxById[trip.id],
-              index >= allTrips.count - (Constants.pageSize / 2),
-              allTrips.count < totalTripCount else { return }
+    func loadMoreData() async {
+        guard let activeVeh = await vehicleStore.active else { return }
+        let page = await page
         
-        Task {
-            guard let activeVeh = vehicleStore.active else { return }
-            let page = page
-            
-            do {
-                let trips: [VehicleTrip] = try await db.pool.read { db in
-                    return try activeVeh.trips
-                        .including(required: Trip.vehicle)
-                        .asRequest(of: VehicleTrip.self)
-                        .order(Column("toOdo").desc)
-                        .limit(Constants.pageSize, offset: page * Constants.pageSize)
-                        .fetchAll(db)
-                }
-                
-                appendTrips(trips)
-                bumpPage()
-            } catch {
-                print(error.localizedDescription)
+        do {
+            let trips: [VehicleTrip] = try await db.pool.read { db in
+                return try activeVeh.trips
+                    .including(required: Trip.vehicle)
+                    .asRequest(of: VehicleTrip.self)
+                    .order(Column("toOdo").desc)
+                    .limit(Constants.pageSize, offset: page * Constants.pageSize)
+                    .fetchAll(db)
             }
+            
+            await appendItems(trips)
+            await bumpPage()
+        } catch {
+            print(error.localizedDescription)
         }
     }
     
@@ -122,8 +117,8 @@ actor TripsViewModel: ObservableObject {
                         .fetchAll(db)
                 
                 Task {
-                    await self.setTripCount(count)
-                    await self.appendTrips(trips)
+                    await self.setCount(count)
+                    await self.appendItems(trips)
                 }
             }
         } catch {
@@ -132,53 +127,28 @@ actor TripsViewModel: ObservableObject {
     }
     
     @MainActor
-    private func resetState() {
-        page = 1
-        tripSections = []
-        allTrips = []
-        tripIdxById = [:]
-        totalTripCount = 0
-    }
-    
-    @MainActor
-    private func appendTrips(_ trips: [VehicleTrip]) {
-        allTrips.append(contentsOf: trips)
-        
-        for (idx, trip) in allTrips.enumerated() {
-            tripIdxById[trip.id] = idx
-        }
-        
-        setupSections()
-    }
-    
-    @MainActor
-    private func setTripCount(_ count: Int) {
-        totalTripCount = count
-    }
-    
-    @MainActor
-    private func setupSections() {
-        let sectionLookup = allTrips.reduce(into: [String: TripSection]()) { result, vehicleTrip in
+    func setupSections() {
+        let sectionLookup = all.reduce(into: [String: TripSection]()) { result, vehicleTrip in
             let groupDateId = formatter.monthYearSortFormatter.string(from: vehicleTrip.date)
             let groupDateDescription = formatter.monthYearFormatter.string(from: vehicleTrip.date)
             
             if result[groupDateId] != nil {
-                result[groupDateId]?.trips.append(vehicleTrip)
+                result[groupDateId]?.items.append(vehicleTrip)
             } else {
-                result[groupDateId] = TripSection(id: groupDateId, description: groupDateDescription, trips: [vehicleTrip])
+                result[groupDateId] = Section(id: groupDateId, description: groupDateDescription, items: [vehicleTrip])
             }
         }
         
         // Decorate section descriptions
         let sections = sectionLookup.values.map { section in
             var sec = section
-            let totalMiles = section.trips.reduce(into: 0) { result, vehicleTrip in
+            let totalMiles = section.items.reduce(into: 0) { result, vehicleTrip in
                 result += vehicleTrip.trip.distance
             }
             
             var totalDays = 1
             
-            if let lastDateStr = section.trips.first?.trip.date,
+            if let lastDateStr = section.items.first?.trip.date,
                let lastDate = formatter.noTimeFormatter.date(from: lastDateStr) {
                 
                 if lastDate.isSameMonthAsToday {
@@ -194,11 +164,6 @@ actor TripsViewModel: ObservableObject {
             return sec
         }.sorted(by: { $0.id > $1.id })
         
-        tripSections = sections
-    }
-    
-    @MainActor
-    private func bumpPage() {
-        page += 1
+        self.sections = sections
     }
 }

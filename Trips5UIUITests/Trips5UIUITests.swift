@@ -79,13 +79,13 @@ final class Trips5UIUITests: XCTestCase {
         
         XCTAssertEqual(1, app.collectionViews.count)
         
-        app.navigationBars["Vehicles"]/*@START_MENU_TOKEN@*/.buttons["Add"]/*[[".otherElements[\"Add\"].buttons[\"Add\"]",".buttons[\"Add\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Vehicles"].buttons["vehicleAddButton"].tap()
         app.navigationBars["Vehicle"]/*@START_MENU_TOKEN@*/.buttons["Save"]/*[[".otherElements[\"Save\"].buttons[\"Save\"]",".buttons[\"Save\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
         XCTAssertTrue(app.collectionViews.buttons["New Vehicle"].waitForExistence(timeout: 1))
         
         app.collectionViews.buttons["New Vehicle"].tap()
-        app.collectionViews.buttons["Delete"].tap()
+        app.collectionViews.buttons["vehicleDeleteButton"].tap()
         
         XCTAssertFalse(app.collectionViews.buttons["New Vehicle"].waitForExistence(timeout: 1))
     }

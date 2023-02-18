@@ -40,26 +40,17 @@ struct FuelFormView: View {
         NavigationStack {
             Form {
                 Section(header: Text("")) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Date")
-                            .font(Font.caption2)
-                            .foregroundColor(Color(uiColor: dependencies.theme.tintColor))
+                    FormRow(label: "Date") {
                         DatePicker("", selection: $viewModel.date, displayedComponents: [.date])
                     }
                 }
                 Section(header: Text("")) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("From")
-                            .font(Font.caption2)
-                            .foregroundColor(Color(uiColor: dependencies.theme.tintColor))
+                    FormRow(label: "From") {
                         TextField("", text: $viewModel.fromOdo)
-                            .focused($focusedField, equals: .fromOdo)
                             .keyboardType(.numberPad)
+                            .focused($focusedField, equals: .fromOdo)
                     }
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("To")
-                            .font(Font.caption2)
-                            .foregroundColor(Color(uiColor: dependencies.theme.tintColor))
+                    FormRow(label: "To") {
                         TextField("", text: $viewModel.toOdo)
                             .keyboardType(.numberPad)
                             .focused($focusedField, equals: .toOdo)
@@ -67,10 +58,7 @@ struct FuelFormView: View {
                                 focusedField = .toOdo
                             }
                     }
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Fuel Amount")
-                            .font(Font.caption2)
-                            .foregroundColor(Color(uiColor: dependencies.theme.tintColor))
+                    FormRow(label: "Fuel Amount") {
                         TextField("", text: $viewModel.fuelAmount)
                             .focused($focusedField, equals: .fuelAmt)
                             .keyboardType(.decimalPad)
@@ -118,28 +106,15 @@ struct FuelFormView: View {
             }
             .navigationTitle("Fuel Entry").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        Task {
-                            await dependencies.fuelStore.upsert(viewModel.asVehicleFuel)
-                        }
-                        dismiss()
-                    }, label: {
-                        Text("Save")
-                    })
-                    .accessibilityIdentifier("fuelSaveButton")
-                    .accessibilityLabel("Save Fuel")
-                    .disabled(!viewModel.canSave)
-                }
-                ToolbarItem(placement: .keyboard) {
-                    Button("Next") {
-                        focusedField = focusedField?.next
+                FormToolbar(canSave: viewModel.canSave, doneAction: {
+                    focusedField = nil
+                }, nextAction: {
+                    focusedField = focusedField?.next
+                }) {
+                    Task {
+                        await dependencies.fuelStore.upsert(viewModel.asVehicleFuel)
                     }
-                }
-                ToolbarItem(placement: .keyboard) {
-                    Button("Done") {
-                        focusedField = nil
-                    }
+                    dismiss()
                 }
             }
         }

@@ -9,13 +9,16 @@ import Combine
 import Foundation
 import GRDB
 
-actor FuelsViewModel: ObservableObject {
+actor FuelsViewModel: ObservableObject, PagingEnabledViewModel {
+    typealias Item = VehicleFuel
+    typealias Section = FuelSection
+    
     typealias Dependencies = DatabaseProvider & FormatterProvider & VehicleStoreProvider
     
     struct FuelSection: Identifiable, Hashable {
         var id: String
         var description: String
-        var fuels: [VehicleFuel]
+        var items: [VehicleFuel]
         
         func hash(into hasher: inout Hasher) {
             hasher.combine(id)
@@ -24,20 +27,20 @@ actor FuelsViewModel: ObservableObject {
     
     @MainActor
     @Published
-    var fuelSections = [FuelSection]()
+    var sections = [FuelSection]()
     
     private let db: Database
     private let formatter: Formatter
     private let vehicleStore: VehicleStore
     
     @MainActor
-    private var page = 1
+    var page = 1
     @MainActor
-    var allFuels = [VehicleFuel]()
+    var all = [VehicleFuel]()
     @MainActor
-    private var fuelIdxById = [String: Int]()
+    var itemIdxById = [String: Int]()
     @MainActor
-    private var totalFuelCount = 0
+    var totalCount = 0
     
     private var fuelsSub: AnyCancellable?
     
@@ -57,32 +60,24 @@ actor FuelsViewModel: ObservableObject {
         }
     }
     
-    @MainActor
-    func itemAppeared(_ fuel: VehicleFuel) {
-        guard allFuels.count > 0,
-              let index = fuelIdxById[fuel.id],
-              index >= allFuels.count - (Constants.pageSize / 2),
-              allFuels.count < totalFuelCount else { return }
+    func loadMoreData() async {
+        guard let activeVeh = await vehicleStore.active else { return }
+        let page = await page
         
-        Task {
-            guard let activeVeh = vehicleStore.active else { return }
-            let page = page
-            
-            do {
-                let fuels: [VehicleFuel] = try await db.pool.read { db in
-                    return try activeVeh.fuels
-                        .including(required: Fuel.vehicle)
-                        .asRequest(of: VehicleFuel.self)
-                        .order(Column("toOdo").desc)
-                        .limit(Constants.pageSize, offset: page * Constants.pageSize)
-                        .fetchAll(db)
-                }
-                
-                appendFuels(fuels)
-                bumpPage()
-            } catch {
-                print(error.localizedDescription)
+        do {
+            let fuels: [VehicleFuel] = try await db.pool.read { db in
+                return try activeVeh.fuels
+                    .including(required: Fuel.vehicle)
+                    .asRequest(of: VehicleFuel.self)
+                    .order(Column("toOdo").desc)
+                    .limit(Constants.pageSize, offset: page * Constants.pageSize)
+                    .fetchAll(db)
             }
+            
+            await self.appendItems(fuels)
+            await self.bumpPage()
+        } catch {
+            print(error.localizedDescription)
         }
     }
     
@@ -105,13 +100,15 @@ actor FuelsViewModel: ObservableObject {
     
     private func loadInitialData() async {
         await MainActor.run {
-            self.resetState()
+            resetState()
         }
         
         guard let activeVeh = await self.vehicleStore.active else { return }
         
         do {
-            try await db.pool.read { db in
+            try await db.pool.read { [weak self] db in
+                guard let self = self else { return }
+                
                 let count = try activeVeh.fuels.fetchCount(db)
                 
                 let fuels = try activeVeh.fuels
@@ -122,8 +119,8 @@ actor FuelsViewModel: ObservableObject {
                         .fetchAll(db)
                 
                 Task {
-                    await self.setFuelCount(count)
-                    await self.appendFuels(fuels)
+                    await self.setCount(count)
+                    await self.appendItems(fuels)
                 }
             }
         } catch {
@@ -132,50 +129,25 @@ actor FuelsViewModel: ObservableObject {
     }
     
     @MainActor
-    private func resetState() {
-        page = 1
-        fuelSections = []
-        allFuels = []
-        fuelIdxById = [:]
-        totalFuelCount = 0
-    }
-    
-    @MainActor
-    private func appendFuels(_ fuels: [VehicleFuel]) {
-        allFuels.append(contentsOf: fuels)
-        
-        for (idx, fuel) in allFuels.enumerated() {
-            fuelIdxById[fuel.id] = idx
-        }
-        
-        setupSections()
-    }
-    
-    @MainActor
-    private func setFuelCount(_ count: Int) {
-        totalFuelCount = count
-    }
-    
-    @MainActor
-    private func setupSections() {
-        let sectionLookup = allFuels.reduce(into: [String: FuelSection]()) { result, vehicleFuel in
+    func setupSections() {
+        let sectionLookup = all.reduce(into: [String: FuelSection]()) { result, vehicleFuel in
             let groupDateId = formatter.monthYearSortFormatter.string(from: vehicleFuel.date)
             let groupDateDescription = formatter.monthYearFormatter.string(from: vehicleFuel.date)
             
             if result[groupDateId] != nil {
-                result[groupDateId]?.fuels.append(vehicleFuel)
+                result[groupDateId]?.items.append(vehicleFuel)
             } else {
-                result[groupDateId] = FuelSection(id: groupDateId, description: groupDateDescription, fuels: [vehicleFuel])
+                result[groupDateId] = FuelSection(id: groupDateId, description: groupDateDescription, items: [vehicleFuel])
             }
         }
         
         // Decorate section descriptions
         let sections = sectionLookup.values.map { section in
             var sec = section
-            let totalMiles = section.fuels.reduce(into: 0) { result, vehicleFuel in
+            let totalMiles = section.items.reduce(into: 0) { result, vehicleFuel in
                 result += vehicleFuel.fuel.distance
             }
-            let totalFuel = section.fuels.reduce(into: 0) { result, vehicleFuel in
+            let totalFuel = section.items.reduce(into: 0) { result, vehicleFuel in
                 result += vehicleFuel.fuel.fuelAmount
             }
             
@@ -184,11 +156,6 @@ actor FuelsViewModel: ObservableObject {
             return sec
         }.sorted(by: { $0.id > $1.id })
         
-        fuelSections = sections
-    }
-    
-    @MainActor
-    private func bumpPage() {
-        page += 1
+        self.sections = sections
     }
 }

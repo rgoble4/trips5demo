@@ -39,26 +39,17 @@ struct TripFormView: View {
         NavigationStack {
             Form {
                 Section(header: Text("")) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Date")
-                            .font(Font.caption2)
-                            .foregroundColor(Color(uiColor: dependencies.theme.tintColor))
+                    FormRow(label: "Date") {
                         DatePicker("", selection: $viewModel.date, displayedComponents: [.date])
                     }
                 }
                 Section(header: Text("")) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("From")
-                            .font(Font.caption2)
-                            .foregroundColor(Color(uiColor: dependencies.theme.tintColor))
+                    FormRow(label: "From") {
                         TextField("", text: $viewModel.fromOdo)
                             .keyboardType(.numberPad)
                             .focused($focusedField, equals: .fromOdo)
                     }
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("To")
-                            .font(Font.caption2)
-                            .foregroundColor(Color(uiColor: dependencies.theme.tintColor))
+                    FormRow(label: "To") {
                         TextField("", text: $viewModel.toOdo)
                             .keyboardType(.numberPad)
                             .focused($focusedField, equals: .toOdo)
@@ -90,28 +81,15 @@ struct TripFormView: View {
             }
             .navigationTitle("Trip").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        Task {
-                            await dependencies.tripStore.upsert(viewModel.asVehicleTrip)
-                        }
-                        dismiss()
-                    }, label: {
-                        Text("Save")
-                    })
-                    .accessibilityIdentifier("tripSaveButton")
-                    .accessibilityLabel("Save Trip")
-                    .disabled(!viewModel.canSave)
-                }
-                ToolbarItem(placement: .keyboard) {
-                    Button("Next") {
-                        focusedField = focusedField?.next
+                FormToolbar(canSave: viewModel.canSave, doneAction: {
+                    focusedField = nil
+                }, nextAction: {
+                    focusedField = focusedField?.next
+                }) {
+                    Task {
+                        await dependencies.tripStore.upsert(viewModel.asVehicleTrip)
                     }
-                }
-                ToolbarItem(placement: .keyboard) {
-                    Button("Done") {
-                        focusedField = nil
-                    }
+                    dismiss()
                 }
             }
         }
