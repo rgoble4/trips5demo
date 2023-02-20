@@ -46,7 +46,6 @@
 		D489BEB7298EE5FD00783DD8 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEB6298EE5FD00783DD8 /* DashboardViewModel.swift */; };
 		D489BEBB298F1B4900783DD8 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBA298F1B4900783DD8 /* Dependencies.swift */; };
 		D489BEBD298F684C00783DD8 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBC298F684C00783DD8 /* ButtonBarView.swift */; };
-		D489BEBF298F802500783DD8 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBE298F802500783DD8 /* LineChart.swift */; };
 		D489BEC1298F861200783DD8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEC0298F861200783DD8 /* CardView.swift */; };
 		D4A1D90328D96B1A0072F397 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A1D90228D96B1A0072F397 /* ViewUtils.swift */; };
 		D4CB816029A0776600B2A219 /* TripCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CB815F29A0776600B2A219 /* TripCellView.swift */; };
@@ -106,7 +105,6 @@
 		D4F6F4E029985AAD0000F33C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEC0298F861200783DD8 /* CardView.swift */; };
 		D4F6F4E129985AAD0000F33C /* GaugeGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4A6299756C20000F33C /* GaugeGroupView.swift */; };
 		D4F6F4E229985AAD0000F33C /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEB4298EE14600783DD8 /* DashboardView.swift */; };
-		D4F6F4E329985AAD0000F33C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBE298F802500783DD8 /* LineChart.swift */; };
 		D4F6F4E429985AAD0000F33C /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41540212991E5E400B81E18 /* LineGraphView.swift */; };
 		D4F6F4E529985AAD0000F33C /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBC298F684C00783DD8 /* ButtonBarView.swift */; };
 		D4F6F4E629985AAD0000F33C /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415401D2990B08D00B81E18 /* GaugeView.swift */; };
@@ -114,7 +112,6 @@
 		D4F6F4E829985AAD0000F33C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEC0298F861200783DD8 /* CardView.swift */; };
 		D4F6F4E929985AAD0000F33C /* GaugeGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6F4A6299756C20000F33C /* GaugeGroupView.swift */; };
 		D4F6F4EA29985AAD0000F33C /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEB4298EE14600783DD8 /* DashboardView.swift */; };
-		D4F6F4EB29985AAD0000F33C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBE298F802500783DD8 /* LineChart.swift */; };
 		D4F6F4EC29985AAD0000F33C /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41540212991E5E400B81E18 /* LineGraphView.swift */; };
 		D4F6F4ED29985AAD0000F33C /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489BEBC298F684C00783DD8 /* ButtonBarView.swift */; };
 		D4F6F4EE29985AB30000F33C /* FuelFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4283F3D28D40A7E003EA864 /* FuelFormViewModel.swift */; };
@@ -234,7 +231,6 @@
 		D489BEB6298EE5FD00783DD8 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		D489BEBA298F1B4900783DD8 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		D489BEBC298F684C00783DD8 /* ButtonBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBarView.swift; sourceTree = "<group>"; };
-		D489BEBE298F802500783DD8 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		D489BEC0298F861200783DD8 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D4A1D90228D96B1A0072F397 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		D4CB815F29A0776600B2A219 /* TripCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellView.swift; sourceTree = "<group>"; };
@@ -405,7 +401,6 @@
 				D489BEB6298EE5FD00783DD8 /* DashboardViewModel.swift */,
 				D4F6F4A6299756C20000F33C /* GaugeGroupView.swift */,
 				D415401D2990B08D00B81E18 /* GaugeView.swift */,
-				D489BEBE298F802500783DD8 /* LineChart.swift */,
 				D41540212991E5E400B81E18 /* LineGraphView.swift */,
 			);
 			path = Dashboard;
@@ -639,7 +634,6 @@
 				D4019CE428A8A962001A1A37 /* NavView.swift in Sources */,
 				D415401E2990B08D00B81E18 /* GaugeView.swift in Sources */,
 				D4019CE628A8AA2B001A1A37 /* SettingsView.swift in Sources */,
-				D489BEBF298F802500783DD8 /* LineChart.swift in Sources */,
 				D4CF8C4B28C6EC06006AFC56 /* Fuel.swift in Sources */,
 				D4CF8C3A28C060D2006AFC56 /* SyncManager.swift in Sources */,
 				D4CB816829A16CAA00B2A219 /* ListDataCell.swift in Sources */,
@@ -686,7 +680,6 @@
 				D4F6F4E129985AAD0000F33C /* GaugeGroupView.swift in Sources */,
 				D4F6F4CB29985AA00000F33C /* VehicleFuel.swift in Sources */,
 				D4F6F51229985AC10000F33C /* Theme.swift in Sources */,
-				D4F6F4E329985AAD0000F33C /* LineChart.swift in Sources */,
 				D4F6F4D729985AA70000F33C /* Trips5Fuel.swift in Sources */,
 				D466C7C92998B41B00D7448E /* ModelTests.swift in Sources */,
 				D4F6F4D429985AA70000F33C /* Trips5Trip.swift in Sources */,
@@ -775,7 +768,6 @@
 				D4F6F52529985AC20000F33C /* NoDataView.swift in Sources */,
 				D4F6F52429985AC20000F33C /* NavView.swift in Sources */,
 				D4F6F50329985ABC0000F33C /* TripsViewModel.swift in Sources */,
-				D4F6F4EB29985AAD0000F33C /* LineChart.swift in Sources */,
 				D4F6F4E629985AAD0000F33C /* GaugeView.swift in Sources */,
 				D4F6F4C02998584B0000F33C /* Trips5UIUITests.swift in Sources */,
 				D4F6F4D029985AA10000F33C /* Vehicle.swift in Sources */,

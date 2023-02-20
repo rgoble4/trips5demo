@@ -7,16 +7,6 @@
 
 import Foundation
 
-//struct Section<T: Identifiable, Hashable> {
-//    var id: String
-//    var description: String
-//    var items: [T]
-//    
-//    func hash(into hasher: inout Hasher) {
-//        hasher.combine(id)
-//    }
-//}
-
 protocol PagingEnabledViewModel: AnyObject {
     associatedtype Section
     associatedtype Item where Item: Identifiable
