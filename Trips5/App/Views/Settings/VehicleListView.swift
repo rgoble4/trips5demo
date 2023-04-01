@@ -33,10 +33,8 @@ struct VehicleListView: View {
                     }
                 })
                 .listRowInsets(Constants.listInsets)
-                .sheet(item: $vehicleToEdit, content: { detail in
-                    if let veh = detail {
-                        VehicleFormView(vehicle: veh)
-                    }
+                .sheet(item: $vehicleToEdit, content: { vehicle in
+                    VehicleFormView(vehicle: vehicle)
                 })
             }
         }
@@ -50,10 +48,8 @@ struct VehicleListView: View {
                 })
                 .accessibilityIdentifier("vehicleAddButton")
                 .accessibilityLabel("Add Vehicle")
-                .sheet(item: $vehicleToEdit, content: { detail in
-                    if let veh = detail {
-                        VehicleFormView(vehicle: veh)
-                    }
+                .sheet(item: $vehicleToEdit, content: { vehicle in
+                    VehicleFormView(vehicle: vehicle)
                 })
             }
         }

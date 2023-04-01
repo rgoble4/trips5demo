@@ -42,11 +42,9 @@ struct TripsView: View {
                             .onAppear {
                                 tripsViewModel.itemAppeared(vehicleTrip)
                             }
-                            .sheet(item: $tripToEdit) { detail in
-                                if let tripToEdit = detail {
-                                    let vm = TripFormViewModel(dependencies, vehicleTrip: tripToEdit)
-                                    TripFormView(viewModel: vm)
-                                }
+                            .sheet(item: $tripToEdit) { tripToEdit in
+                                let vm = TripFormViewModel(dependencies, vehicleTrip: tripToEdit)
+                                TripFormView(viewModel: vm)
                             }
                         }
                     }
@@ -70,11 +68,9 @@ struct TripsView: View {
                     })
                     .accessibilityIdentifier("tripAddButton")
                     .accessibilityLabel("Add Trip")
-                    .sheet(item: $tripToEdit) { detail in
-                        if let tripToEdit = detail {
-                            let vm = TripFormViewModel(dependencies, vehicleTrip: tripToEdit)
-                            TripFormView(viewModel: vm)
-                        }
+                    .sheet(item: $tripToEdit) { tripToEdit in
+                        let vm = TripFormViewModel(dependencies, vehicleTrip: tripToEdit)
+                        TripFormView(viewModel: vm)
                     }
                     .disabled(vehicleStore.active == nil)
                 }

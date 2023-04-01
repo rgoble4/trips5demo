@@ -45,11 +45,9 @@ struct ButtonBarView: View {
             }, label: {
                 Image(systemName: "plus")
                 Text("Trip")
-            }).sheet(item: $tripToEdit) { detail in
-                if let tripToEdit = detail {
-                    let vm = TripFormViewModel(dependencies, vehicleTrip: tripToEdit)
-                    TripFormView(viewModel: vm)
-                }
+            }).sheet(item: $tripToEdit) { tripToEdit in
+                let vm = TripFormViewModel(dependencies, vehicleTrip: tripToEdit)
+                TripFormView(viewModel: vm)
             }
             .accessibilityIdentifier("dashboardAddTripButton")
             .accessibilityLabel("Add Trip")
@@ -64,11 +62,9 @@ struct ButtonBarView: View {
             }, label: {
                 Image(systemName: "plus")
                 Text("Fuel")
-            }).sheet(item: $fuelToEdit) { detail in
-                if let fuelToEdit = detail {
-                    let vm = FuelFormViewModel(dependencies, vehicleFuel: fuelToEdit)
-                    FuelFormView(viewModel: vm)
-                }
+            }).sheet(item: $fuelToEdit) { fuelToEdit in
+                let vm = FuelFormViewModel(dependencies, vehicleFuel: fuelToEdit)
+                FuelFormView(viewModel: vm)
             }
             .accessibilityIdentifier("dashboardAddFuelButton")
             .accessibilityLabel("Add Fuel")

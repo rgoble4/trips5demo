@@ -42,11 +42,9 @@ struct FuelsView: View {
                             .onAppear {
                                 fuelsViewModel.itemAppeared(vehicleFuel)
                             }
-                            .sheet(item: $fuelToEdit) { detail in
-                                if let fuelToEdit = detail {
-                                    let vm = FuelFormViewModel(dependencies, vehicleFuel: fuelToEdit)
-                                    FuelFormView(viewModel: vm)
-                                }
+                            .sheet(item: $fuelToEdit) { fuelToEdit in
+                                let vm = FuelFormViewModel(dependencies, vehicleFuel: fuelToEdit)
+                                FuelFormView(viewModel: vm)
                             }
                         }
                     }
@@ -70,11 +68,9 @@ struct FuelsView: View {
                     })
                     .accessibilityIdentifier("fuelAddButton")
                     .accessibilityLabel("Add Fuel")
-                    .sheet(item: $fuelToEdit) { detail in
-                        if let fuelToEdit = detail {
-                            let vm = FuelFormViewModel(dependencies, vehicleFuel: fuelToEdit)
-                            FuelFormView(viewModel: vm)
-                        }
+                    .sheet(item: $fuelToEdit) { fuelToEdit in
+                        let vm = FuelFormViewModel(dependencies, vehicleFuel: fuelToEdit)
+                        FuelFormView(viewModel: vm)
                     }
                     .disabled(vehicleStore.active == nil)
                 }
